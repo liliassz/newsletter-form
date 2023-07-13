@@ -1,0 +1,238 @@
+:root {
+    /* Layout */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+   
+    /* Cores */
+    --primary-color: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+  
+    /* Tipografia */
+    --paragraph-font-size: 16px;
+  
+    /* Fonte */
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Estilos globais */
+body {
+    background: var(--charcoal-grey);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura do contêiner para ocupar toda a altura da tela */
+  
+}
+
+.card {
+    display: flex;
+    max-width: 90%;
+    max-height: auto;
+    background: var(--white);
+    border-radius: 35px;
+}
+
+.primeira-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.primeira-section-titulo {
+    color: var(--dark-slate-grey);
+    font-size: 3rem;
+    font-family: 'RobotoBold';
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+
+.primeira-section-subtitulo {
+    color: var(--dark-slate-grey);
+    font-size: 16px;
+    font-family: 'RobotoRegular';
+    margin-bottom: 15px;
+}
+
+.primeira-section-messages {
+    color: var(--dark-slate-grey);
+    font-family: 'RobotoRegular';
+    font-size: 0.9rem;
+    line-height: 30px;
+}
+.primeira-section-messages img {
+    display: inline-block;
+    width: 5%;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+.primeira-section-img-cll {
+    display: none;
+}
+
+.segunda-section {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.segunda-section-img {
+    max-width: 96%;  
+    max-height: 100%;
+}
+.segunda-section-img2 {
+    display: none;
+}
+
+.form-align {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 12px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9vw;
+    margin-bottom: 4px;
+    font-family: 'RobotoBold';
+    color: var(--dark-slate-grey);
+}
+
+input {
+    max-width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: 1px solid var(--grey);
+    margin-bottom: 20px;
+}
+
+button {
+    max-width: 100%;
+    font-size: 13px;
+    height: 45px;
+    border-radius: 7px;
+    background-color: var(--dark-slate-grey);
+    font-family: 'RobotoBold';
+    color: var(--white);
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid var(--grey);
+    font-size: 13.1px;
+    transition: all 0.2s;
+}
+
+.active {
+    background: linear-gradient(45deg,IndianRed, LightCoral, Coral);
+    border: 1px solid var(--grey);
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .card {
+        display: flex;
+        max-width: 90%;
+        max-height: auto;
+        background: var(--white);
+        border-radius: 35px;
+        flex-direction: column;
+    }
+    .primeira-section {
+        margin-right: 40px;
+    }
+    .primeira-section-img-cll{
+        display: block ;
+        object-fit: cover;
+        max-width: 100%;
+        height: 32vh;
+        border-radius: 34px 34px 10px 10px;
+    }
+    br {
+        display: none;
+    }
+    p {
+        font-size: 12px;
+    }
+    .primeira-section-titulo {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .primeira-section-subtitulo {
+        font-size: 1.9vh;
+    }
+    .segunda-section-img {
+        display: none;
+    }
+    form {
+        margin-top: 15px;
+    }
+    label {
+        font-size: 1.8vw;
+    }
+    input {
+        height: 50px;
+    }
+    button {
+        font-size: 15px;
+        height: 50px;
+    }   
+}
+    
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    p {
+        font-size: 0.8rem;
+    }
+    br {
+        display: none;
+    }
+    .primeira-section-titulo {
+        font-size: 2.8rem;
+    }
+    .primeira-section-subtitulo {
+        font-size: 1.9vh;
+    }
+    label {
+        font-size: 1.4vw;
+    } 
+}

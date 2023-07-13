@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Elias Souza">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Newsletter Form</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body> 
+  
+  <div class="container">
+    <div class="card">
+      <img class="primeira-section-img-cll" src="assets/images/illustration-sign-up-mobile.svg" alt="" srcset="">
+      <div class="primeira-section">
+        <h1 class="primeira-section-titulo">Stay updated!</h1>
+        <p class="primeira-section-subtitulo">Join 60,000+ product managers receiving monthly<br>updates on:</p>
+        <div class="primeira-section-messages">
+          <p>
+            <img src="assets/images/icon-success.svg" alt="" srcset="">Product discovery and building what matters
+          </p>
+          <p>
+            <img src="assets/images/icon-success.svg" alt="" srcset="">Measuring to ensure updates are a success
+          </p>
+          <p>
+            <img src="assets/images/icon-success.svg" alt="" srcset="">And much more!
+          </p>
+        </div>
+        <form>
+          <div class="form-align">
+          <label>Email addres</label>
+          <span class="errorMsg" id="errorMsg"></span>
+          </div>
+          <input id="emailInput" type="email" name="email" placeholder="email@company.com" required>
+          <button id="submitButton">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+
+      <div class="segunda-section">
+        <img class="segunda-section-img" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/emalForm.js"></script>
+</body>
+</html>

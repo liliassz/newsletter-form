@@ -1,0 +1,145 @@
+:root {
+    /* Layout */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+   
+    /* Cores */
+    --primary-color: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+  
+    /* Tipografia */
+    --paragraph-font-size: 16px;
+  
+    /* Fonte */
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Estilos globais */
+body {
+    background: var(--charcoal-grey);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura do contêiner para ocupar toda a altura da tela */
+  
+}
+
+.card {
+    max-width: 50%;
+    max-height: auto;
+    background: var(--white);
+    border-radius: 35px;
+    transition: all 0.5s;
+
+}
+
+.card-img {
+    margin: 40px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.card-titulo {
+    color: var(--dark-slate-grey);
+    font-size: 4.5vw;
+    font-family: 'RobotoBold';
+    line-height: 5.5vw;
+    margin-bottom: 20px;
+}
+
+.card-message {
+    color: var(--dark-slate-grey);
+    font-size: 2vw;
+    font-family: 'RobotoRegular';
+    max-width: 90%;
+}
+
+button {
+    width: 100%;
+    font-size: 1vm;
+    height: 45px;
+    border-radius: 7px;
+    background: linear-gradient(45deg,IndianRed, Coral);
+    border: 1px solid var(--grey);
+    font-family: 'RobotoBold';
+    color: var(--white);
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+button:hover {
+    cursor: pointer;
+    font-size: 13.1px;
+    transition: all 0.2s;
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+    .card {
+        max-width: 70%;
+    }
+    .card-section {
+        margin-left: 30px;
+        margin-right: 30px;
+    
+    }
+    .card-titulo {
+        font-size: 6vw;
+        line-height: 5.5vh;
+    }
+    .card-message {
+        font-size: 3vw;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .card-section {
+        margin-left: 40px;
+        margin-right: 40px;
+    
+    }
+    .card-titulo {
+        font-size: 3.5vw;
+        line-height: 7vh;
+    }
+    .card-message {
+        font-size: 1vw;
+        max-width: 90%;
+    }
+}
