@@ -32,4 +32,4 @@ Seus usuários devem ser capazes de:
   
    </details> <br>
 
-## Voçê pode ver como ficou o formulario [clicando aqui](https://www.frontendmentor.io).
+## Voçê pode ver como ficou o formulario [clicando aqui](https://liliassz.github.io/newsletter-form/).
